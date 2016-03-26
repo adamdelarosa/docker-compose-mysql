@@ -1,0 +1,11 @@
+version: '2'
+services:
+ nginx:
+  container_name: mysql
+  image: mysql
+  ports:
+  - "3306:3306"
+  volumes:
+  - ./mysql/data:/var/www
+  environment:
+  - MYSQL_ROOT_PASSWORD=password
